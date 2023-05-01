@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    display: grid;
+    place-items: center;
+    margin: 0;
+    padding: 0 24px;
+    background-image: url("img/endless-constellation.svg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    font-family: "Rubik";
+    color: #000;
+    animation: rotate 6s infinite alternate linear;
+}
+
+.login {
+    position: fixed;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 90%;
+    padding: 70px 30px 44px;
+    border-radius: 1.25rem;
+    background: #fff;
+    text-align:center;
+}
+
+
+.login >img {
+    width: 120px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 40%;
+
+}
+
+.login-form{
+    width: 100%;
+    margin: 0;
+    display: grid;
+    gap: 16px;
+}
+
+.login-form > input, .login-form > button{
+    width: 100%;
+    height: 50px;
+}
+
+.login-form > input {
+    border: 2px solid #ebebeb;
+    font-family: inherit;
+    font-size: 15px;
+    padding: 0 16px;
+    border-radius: 1.25rem;
+    transition: all 0.375s;
+}
+
+.login-form > input:hover{
+    border: 2px solid #cf101a;
+}
+
+.login-form > button{
+    cursor: pointer;
+    width: 100%;
+    padding: 0 16px;
+    border-radius: 1.25rem;
+    background: #be0936;
+    color: #f9f9f9;
+    border: 0;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: all 0.375s;
+}
+
+.login-form > button:hover{
+    background: #ec2758;
+}
+
+.login-form > a{
+    color: #216ce7;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 6px;
+    transition: all 0.375s;
+}
+
+.login-form > a:hover{
+    color: #10449A;
+}
+
+@media (width >= 450px){
+    .login {
+        width: 380px;
+    }
+}
+
+
+@media (width>=500px){
+    body{
+        padding:0
+    }
+}
+
+@media (width>=1200px){
+    .login{
+        width: 25%
+    }
+}
+
+@keyframes rotate{
+    100%{
+        background-position: 15% 50%;
+    }
+}
+
+
+
+
